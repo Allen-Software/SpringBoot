@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>員工個資移除介面</title>
+</head>
+
+<body>
+    <h1>員工個資移除介面</h1>
+
+    <form th:action="@{/employee/delete}" th:object="${employee}" method="POST">
+        <div>
+            <label for="id">員工編號 :</label>
+            <input type="number" id="id" th:field="*{id}" min="1" required>
+        </div>
+
+        <div>
+            <button type="submit">移除員工資料</button>
+            <a th:href="@{/}"><button type="button">取消回首頁</button></a>
+        </div>
+    </form>
+
+    <script th:src="@{/js/delete.js}"></script>
+</body>
+
+</html>

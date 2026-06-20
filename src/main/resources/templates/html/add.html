@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>員工個資輸入介面</title>
+</head>
+
+<body>
+
+    <h1>員工個資輸入介面</h1>
+
+    <form th:action="@{/employee/save}" th:object="${employee}" method="POST">
+
+        <input type="hidden" th:field="*{id}">
+
+        <div>
+            <label for="name">姓名 :</label>
+            <input type="text" id="name" th:field="*{name}" required>
+        </div>
+        <br>
+        <div>
+            <label for="gmail">電子信箱 :</label>
+            <input type="email" id="gmail" th:field="*{gmail}" required>
+        </div>
+        <br>
+        <div>
+            <label for="department">部門 :</label>
+            <input type="text" id="department" th:field="*{department}" required>
+        </div>
+        <br>
+        <div>
+            <label for="gender">性別 :</label>
+            <input type="text" id="gender" th:field="*{gender}" required>
+        </div>
+        <br>
+
+        <div>
+            <button type="submit">儲存員工資料</button>
+            <a th:href="@{/}"><button type="button">取消回首頁</button></a>
+        </div>
+    </form>
+
+    <script th:src="@{/js/add.js}"></script>
+</body>
+
+</html>
