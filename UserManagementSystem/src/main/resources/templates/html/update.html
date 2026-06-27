@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>員工個資更新介面</title>
+    <link rel="stylesheet" th:href="@{/css/update.css}">
+</head>
+
+<body>
+
+    <h1>員工個資更新介面</h1>
+
+    <div id="result-message"></div>
+
+    <div id="main-menu">
+        <button type="button" id="btn-update-name">更新姓名</button>
+        <button type="button" id="btn-update-email">更新電子信箱</button>
+        <button type="button" id="btn-update-dept">更新部門</button>
+        <button type="button" id="btn-update-gender">更新性別</button>
+    </div>
+
+    <div id="name-form-container" class="form-container hidden">
+        <h3>更新員工姓名</h3>
+        <form id="name-form">
+            員工編號：<input type="text" name="id" required><br><br>
+            新姓名：<input type="text" name="name" required><br><br>
+            <button type="submit">確認更新</button>
+            <button type="button" class="btn-back">返回首頁</button>
+        </form>
+    </div>
+
+    <div id="email-form-container" class="form-container hidden">
+        <h3>更新員工電子信箱</h3>
+        <form id="email-form">
+            員工編號：<input type="text" name="id" required><br><br>
+            新電子信箱：<input type="email" name="gmail" required><br><br>
+            <button type="submit">確認更新</button>
+            <button type="button" class="btn-back">返回首頁</button>
+        </form>
+    </div>
+
+    <div id="dept-form-container" class="form-container hidden">
+        <h3>更新員工部門</h3>
+        <form id="dept-form">
+            員工編號：<input type="text" name="id" required><br><br>
+            新部門：<input type="text" name="dept" required><br><br>
+            <button type="submit">確認更新</button>
+            <button type="button" class="btn-back">返回首頁</button>
+        </form>
+    </div>
+
+    <div id="gender-form-container" class="form-container hidden">
+        <h3>更新員工性別</h3>
+        <form id="gender-form">
+            員工編號：<input type="text" name="id" required><br><br>
+            新性別：
+            <select name="gender" required>
+                <option value="">請選擇</option>
+                <option value="M">男</option>
+                <option value="F">女</option>
+            </select><br><br>
+            <button type="submit">確認更新</button>
+            <button type="button" class="btn-back">返回首頁</button>
+        </form>
+    </div>
+
+    <div th:fragment="alertMessage" th:if="${message != null}">
+        <b th:text="${message}"></b>
+    </div>
+
+    <script th:src="@{/js/update.js}"></script>
+</body>
+
+</html>

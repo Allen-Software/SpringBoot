@@ -1,0 +1,66 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b5cfe9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 👑 修正：移除原本的 form，並補上 a 標籤的設定，讓按鈕的超連結點擊範圍更精準 */
+.main-content p {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content p a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 👑 關鍵新增：強制讓 Thymeleaf 引入的 header 與 footer 內容也垂直水平置中 */
+.main-content > div {
+    width: 100%;
+    text-align: center;      /* 讓純文字直接置中 */
+    display: flex;
+    justify-content: center; /* 讓區塊內部的 HTML 元件水平置中 */
+    align-items: center;     /* 垂直置中 */
+}
+
+button {
+    width: 280px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 滑鼠懸停效果 */
+button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}

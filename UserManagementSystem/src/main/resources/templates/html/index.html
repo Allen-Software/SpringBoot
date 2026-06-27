@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>員工管理系統首頁</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+
+<body>
+
+    <div class="main-content">
+        <div th:replace="~{common/fragments :: header}"></div>
+        <p>
+            <a th:href="@{/employee/add}">
+                <button type="button">Add employee personal data</button>
+            </a>
+        </p>
+
+        <p>
+            <a th:href="@{/employee/delete}">
+                <button type="button">Delete employee personal data</button>
+            </a>
+        </p>
+
+        <p>
+            <a th:href="@{/employee/update}">
+                <button type="button">Update employee personal data</button>
+            </a>
+        </p>
+
+
+        <p>
+            <a th:href="@{/employee/inquery_all}">
+                <button type="button">Inquire about personal information</button>
+            </a>
+        </p>
+
+
+        <p>
+            <a th:href="@{/employee/query_all}">
+                <button type="button">Query all employee personal data</button>
+            </a>
+        </p>
+        <div th:replace="~{common/fragments :: footer}"></div>
+    </div>
+</body>
+
+</html>
