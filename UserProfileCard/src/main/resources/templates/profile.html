@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-TW" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用者個人資訊卡片</title>
+</head>
+<body>
+    <div th:object="${user}">
+        <h2 th:text="*{username}">使用者名稱</h2>
+
+        <div th:switch="*{role}">
+            <span th:case="'ADMIN'" class="badge-red">系統管理員</span>
+            <span th:case="'EDITOR'" class="badge-blue">編輯者</span>
+            <span th:case="*" class="badge-gray">一般訪客</span>
+        </div>
+
+        <button th:if="*{accountLocked}" class="btn-unlock">解除凍結</button>
+        <button th:unless="*{accountLocked}" class="btn-lock">凍結帳號</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+    "editor.formatOnSave": true,
+
+    "files.trimTrailingWhitespace": true,
+
+    "trailing-spaces.includeEmptyLines": false,
+
+    "trailing-spaces.highlightCurrentLine": false,
+
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "never"
+        }
+    },
+
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "html.format.wrapAttributes": "preserve-aligned",
+
+    "java.configuration.updateBuildConfiguration": "automatic",
+
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/target": true,
+        "**/.mvn": true
+    },
+
+    "spring-boot.ls.java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.11.10-hotspot",
+
+    "cSpell.words": [
+        "springframework",
+        "thymeleaf",
+        "springboot",
+        "usermanagementsystem",
+        "factorypath",
+        "nbproject",
+        "nbbuild",
+        "nbdist",
+        "taskflow",
+        "projectlombok",
+        "jsonwebtoken",
+        "jjwt",
+        "springdoc",
+        "webmvc",
+        "mapstruct",
+        "flywaydb",
+        "taskflow",
+        "Jwts",
+        "Configurer",
+        "XVCJ"
+    ]
+}

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: taskflow-api
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/aqi_database?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: Fs123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 1
