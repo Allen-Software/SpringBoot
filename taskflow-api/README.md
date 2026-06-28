@@ -43,15 +43,16 @@ CRUD 完整操作： 支援任務的新增、查詢、修改與刪除。
 
 # 專案重點目錄結構 (Directory Structure)
   專案採用標準的 Spring Boot 分層架構 (Layered Architecture)，職責劃分明確 :
-  src/main/java/com/taskflow/api
-  ├── config/             # 全域設定檔 (如 OpenAPI/Swagger 設定)
-  ├── controller/         # API 控制器 (接收 HTTP 請求、路由分發)
-  ├── dto/                # 資料傳輸物件 (Data Transfer Objects)
-  │   ├── request/        # 封裝並驗證前端傳來的請求資料
-  │   └── response/       # 封裝並過濾準備回傳給前端的資料
-  ├── entity/             # JPA 實體模型 (對應資料庫資料表與關聯)
-  ├── exception/          # 全域例外處理 (@RestControllerAdvice 與自訂例外)
-  ├── repository/         # 資料存取層 (Spring Data JPA 介面，負責 DB 互動)
-  ├── security/           # 安全防護層 (JWT Filter, Token Provider, Security Config)
-  └── service/            # 業務邏輯層 (商業邏輯處理、權限判斷)
-      └── impl/           # 業務邏輯實作類別
+  ```text
+src/main/java/com/taskflow/api
+├── config/      # 全域設定檔 (如 OpenAPI/Swagger 設定)
+├── controller/  # API 控制器 (接收 HTTP 請求、路由分發)
+├── dto/         # 資料傳輸物件 (Data Transfer Objects)
+│   ├── request/   # 封裝並驗證前端傳來的請求資料
+│   └── response/  # 封裝並過濾準備回傳給前端的資料
+├── entity/      # JPA 實體模型 (對應資料庫資料表與關聯)
+├── exception/   # 全域例外處理 (@RestControllerAdvice 與自訂例外)
+├── repository/  # 資料存取層 (Spring Data JPA 介面，負責 DB 互動)
+├── security/    # 安全防護層 (JWT Filter, Token Provider, Security Config)
+└── service/     # 業務邏輯層 (商業邏輯處理、權限判斷)
+    └── impl/    # 業務邏輯實作類別
